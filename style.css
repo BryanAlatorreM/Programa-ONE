@@ -1,0 +1,332 @@
+ /* *{
+  outline: 1px solid;
+}
+ */
+body,html{
+  width: 100%;
+  height: 100%;
+  background: #FFD3EB;
+  font-family: 'Inter', sans-serif; 
+}
+.page{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 22rem 1fr;
+  grid-template-rows: 1fr 7rem;
+}
+
+aside{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hiddentext{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+#cajaimg{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 280px;;
+  height: auto;
+
+  background:white;
+  box-shadow:0px 32px 32px -5px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+}
+img{
+  max-width:200px;
+  max-height:200px;
+}
+#TextMsg{
+  position: absolute;
+  top: 5%;
+  left: 5.5%;
+  width:200px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color:black;
+}
+#textonuevo{
+  position: absolute;
+  top: 90px;
+  left: 55px;
+  
+  width:240px;
+  height: 192px;
+
+  overflow-wrap: break-word;
+  word-wrap: break-all;
+  text-align: justify;
+  letter-spacing: 2px;
+  
+  font-size:1rem;
+  color:black;
+}
+.cajavisos{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 16px;
+
+  gap:12px;
+  max-width: 260px;
+ 
+  text-align: center;
+  color: #343A40;
+}
+.aviso{
+  font-size:1.2rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+.textoregla{
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 150%;
+}
+.asidebuttons{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:16px;
+  padding-bottom: 16px;
+}
+button{
+  min-width: 200px;
+  height:40px ;
+  font-size:1.2rem;
+
+  border:none;
+  border-radius:12px;
+  transition:0.5s all;
+}
+.borrar,.botondesencriptar{
+  background:#DF639F;
+  
+  border-style: solid;
+  border-width:2px;
+  color:white;
+  border-color:white;
+}
+.Copiar,.botonencriptar{
+  background:white;
+
+  border-style: solid;
+  border-width:2px;
+  color:#DF639F;
+  border-color:#DF639F;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.leftbox{
+  width: 90%;
+}
+.cajatexto{
+  display:flex;
+  font-size: 1rem;
+  justify-content: start;
+  align-items: center;
+  padding: 0rem 0 0rem 10%  ;
+  gap: 8px;
+}
+.Icono{
+  width: 1rem;
+  height: 1rem;
+  background: url('https://api.iconify.design/bi/exclamation-circle-fill.svg') no-repeat left center / contain;
+}
+.texto{
+  width:80%;
+  height:1rem;
+  margin:1rem 10% 0 10%;
+  padding: 1.75rem 0 8rem 1rem;
+
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  font-size: 1.2rem;
+
+  border-radius:15px;
+  border:none;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  background:white;
+}
+.botoneria{
+  display: flex;
+  gap: 150px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+::placeholder{
+  font-size:1.5rem;
+  color:#DF639F;
+}
+.borrar:hover,.botondesencriptar:hover{
+  color:#DF639F;
+  cursor:pointer;
+  border-color:#DF639F;
+  background:white;
+}
+.botonencriptar:hover,.Copiar:hover{
+  color:white;
+  cursor:pointer;
+  border-color:white;
+  background:#DF639F;
+}
+.texto:focus{
+  outline: 1.5px dashed #DF639F;
+}
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:14px;
+  grid-column: 1/3;
+  background:rgba(255, 25, 152, 0.4);
+  box-shadow: inset 0px 0px 30px 0px rgba(255, 25, 152, 0.6);
+}
+.Redes{  
+  text-align: center;
+  font-size: 1.2rem;
+  color:white;
+}
+.lista{
+  display: flex;
+  flex-direction: row;
+  gap:120px;
+}
+li{
+  font-size:1rem;
+  transition:0.5s all;
+}
+a{
+  text-decoration:none;
+  color:white;
+  transition:0.5s all;
+}
+li:hover,a:hover{
+  color:purple;
+  transform: scale(1.5);
+  animation: colores 2s linear infinite alternate-reverse
+}
+@keyframes colores{
+  0%{
+    color: #1604b4;
+  }
+  50%{
+    color: rgb(59, 103, 170);
+  }
+  75%{
+    color: blueviolet;
+  }
+  100%{
+    color: purple;
+  }
+}
+.copyright{
+  color:#FFFFFF;
+  font-size: 0.75rem;
+}
+
+@media screen and (max-width:480px){
+.page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between ;
+}
+aside{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height:auto;
+}
+.hiddentext{
+  height: auto;
+  display: inline;
+}
+#cajaimg{
+  width: 200px;
+}
+img{
+  width: 150px;
+}
+#TextMsg{
+  left:23.5%;
+}
+#textonuevo{
+  left: 27.5%;
+  width: 45%;
+  height:30%;
+}
+.cajavisos{
+  position: absolute;
+  top:24px;
+  justify-content: start;
+  gap:180px;
+  padding:0 0 24px ;
+  width: 180px;
+}
+.asidebuttons{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:16px;
+  padding:0;
+}
+button{
+  min-width: 140px;
+  height:40px ;
+  font-size:1rem;
+}
+
+main{
+  padding-top: 20px;
+  justify-content: start;
+  gap: 32px;
+  height:auto;
+}
+.texto,::placeholder{
+  font-size: 1.2rem;
+}
+.texto{
+  padding-bottom: 60px;
+}
+.botoneria{
+  gap: 16px;
+}
+
+footer{
+  height: auto;
+  padding-top: 16px;
+  gap:16px;
+}
+.lista{
+  gap: 24px;
+}
+li:hover,a:hover{
+  transform: none
+}
+.copyright{
+padding-bottom: 12px;
+}
+}
